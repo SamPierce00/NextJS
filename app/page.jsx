@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from "react"
 import CountButton from "./CountButton"
 import SearchBar from "./SearchBar"
 export default function Page() {

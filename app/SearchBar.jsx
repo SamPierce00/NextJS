@@ -11,7 +11,7 @@ export default function SearchBar() {
         .then(res => res.json())
         .then(products => {
             const filtered = products.filter((el) => {return el.title.toLowerCase().includes(searchValue.toLowerCase())})
-            const currentFilter = products.map((product, index) => {
+            const currentFilter = filtered.map((product, index) => {
                 return (<div class="prodStyle">
                     <p class="title">{product.title}</p>
                     <p class="price">${product.price}</p>
@@ -21,10 +21,10 @@ export default function SearchBar() {
             setFilteredProducts(currentFilter)
         })
     }   
-    useEffect(fetchAPIData, []) 
 
     function handleInputChange(event) {
         setSearchValue(event.target.value)
+        fetchAPIData()
     }
 
     function handleClearClick() {
