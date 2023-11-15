@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 
-export default function CountButton() {
+export default function CountButton(props) {
     let [count, setCount] = useState(0)
     function handleClick() {
-        setCount(count + 1)
+        setCount(count + props.incrementBy)
     }
     function rollOverCount() {
-        if (count > 10) {
+        if (count > props.limit) {
             setCount(0)
         }
     }
     useEffect(rollOverCount, [count])
     return (
         <div>
-        <button onClick={handleClick}>+1</button>
-        <div>{count}</div>
+            <button onClick={handleClick}>+{props.incrementBy}</button>
+            <div>{count}</div>
         </div>
     )
 }

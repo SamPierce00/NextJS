@@ -1,0 +1,21 @@
+.prodStyle {
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 200px;
+    padding: 1rem;
+    overflow: scroll;
+    margin: 1rem;
+    background-color: rgb(108, 9, 9);
+}
+
+.price {
+    color: rgb(0, 153, 255)
+}
+
+.title {
+    border: 1px solid black;
+    padding: 2px;
+    background-color: darkgray;
+    font-size: 150%;
+    
+}

@@ -1,14 +1,16 @@
 "use client"
-import CountButton1 from "./CountButton1"
-import CountButton5 from "./CountButton5"
-import Link from "next/link"
+import { useState, useEffect } from "react"
+import CountButton from "./CountButton"
+import SearchBar from "./SearchBar"
 export default function Page() {
-    return <div>
-      <CountButton1 />
-      <CountButton5 />
+
+  return <div>
+      <CountButton incrementBy={1} limit={10}/>
+      <CountButton incrementBy={5} limit={20}/>
       <hr />
-      <a Link href="https://github.com/SamPierce00/NextJS.git" passHref={true}>My repo</a>
+      <a href="https://github.com/SamPierce00/NextJS.git">My repo</a>
       <hr />
       <p>Search Bar</p>
+      <SearchBar />
     </div>
   }
